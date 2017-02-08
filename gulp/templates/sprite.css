@@ -1,0 +1,15 @@
+/* Gulp sprite CSS file generator */
+/* Three sets of curly brackets in 'sprite' because the forward slash in the variable shouldn't be escaped */
+
+{{#shapes}}
+    {{#first}}
+    .icon {
+        background-image: url('/assets/images/sprites/{{{sprite}}}');
+    }
+    {{/first}}
+    .icon--{{base}} {
+        width: {{width.outer}}px;
+        height: {{height.outer}}px;        
+        background-position: {{position.relative.xy}};
+    }
+{{/shapes}}
